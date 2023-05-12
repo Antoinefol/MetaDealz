@@ -6,7 +6,6 @@ const WalletButton = () => {
 
   const { ens } = useLookupAddress();
   const { account, activateBrowserWallet, deactivate } = useEthers();
-  console.log(useEthers());
 
   useEffect(() => {
     if (ens) {

@@ -1,11 +1,14 @@
 import "./App.css";
-import { WalletButton } from "./components";
+import { WalletButton, Account } from "./components";
+import { useEthers } from "@usedapp/core";
 
 function App() {
+  const { account } = useEthers();
   return (
     <>
       <div>hello</div>
       <WalletButton />
+      {account && <Account address={account} />}
     </>
   );
 }
