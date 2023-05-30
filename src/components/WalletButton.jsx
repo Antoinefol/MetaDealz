@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { shortenAddress, useEthers, useLookupAddress } from "@usedapp/core";
+import "./components.css";
 
 const WalletButton = () => {
   const [rendered, setRendered] = useState("");
@@ -19,6 +20,7 @@ const WalletButton = () => {
 
   return (
     <button
+      className="walletButton"
       onClick={() => {
         if (!account) {
           activateBrowserWallet();
